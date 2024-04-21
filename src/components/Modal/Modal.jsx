@@ -1,4 +1,5 @@
 import React from 'react';
+import css from './Modal.module.css';
 
 const Modal = ({ onClose, largeImageUrl }) => {
   const handleBackdropClick = event => {
@@ -14,8 +15,8 @@ const Modal = ({ onClose, largeImageUrl }) => {
   };
 
   return (
-    <div className="overlay" onClick={handleBackdropClick}>
-      <div className="modal" onKeyDown={handleKeyDown} tabIndex="0">
+    <div className={css.Overlay} onClick={handleBackdropClick}>
+      <div className={css.Modal} onKeyDown={handleKeyDown} tabIndex="0">
         <img src={largeImageUrl} alt="" className="modal-image" />
       </div>
     </div>
