@@ -6,6 +6,7 @@ import ImageGalleryItem from './ImageGalleryItem/ImageGalleryItem';
 import Button from './Button/Button';
 import Loader from './Loader/Loader';
 import Modal from './Modal/Modal';
+import css from './App.module.css';
 
 const App = () => {
   const [query, setQuery] = useState('');
@@ -55,7 +56,7 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div className={css.App}>
       <Searchbar onSubmit={handleSubmit} />
       {error && <p>Error: {error.message}</p>}
       <ImageGallery>
