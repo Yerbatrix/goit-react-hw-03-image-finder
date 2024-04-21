@@ -7,11 +7,14 @@ const ImageGalleryItem = ({ image, onClick }) => {
   };
 
   return (
-    <a href={image.largeImageURL} onClick={handleClick}>
-      <li className={css.ImageGalleryItem}>
-        <img src={image.webformatURL} alt="" className="gallery-item-image" />
-      </li>
-    </a>
+    <div className={css.ImageGalleryItem}>
+      <img
+        src={image.webformatURL}
+        alt=""
+        className={css.ImageGalleryItemImage}
+        onClick={handleClick}
+      />
+    </div>
   );
 };
 
